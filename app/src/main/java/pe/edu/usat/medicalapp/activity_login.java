@@ -14,7 +14,7 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class activity_login extends AppCompatActivity {
     TextInputEditText txtEmail, txtClave;
-    MaterialButton btnIniciarSesion
+    MaterialButton btnIniciarSesion;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
