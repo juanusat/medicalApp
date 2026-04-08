@@ -56,28 +56,43 @@
             android:layout_height="wrap_content">
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                >
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <com.google.android.material.textfield.TextInputLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:placeholderText="asd"
-                        android:inputType="textPassword"
-                        android:padding="12dp"
-                        android:background="@color/light_grey"
-                        >
-                        <com.google.android.material.textfield.TextInputEditText
+                        android:layout_height="match_parent"
+                        android:text="Inicio de sesión"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="textPassword">
+                            app:placeholderText="asd"
+                            android:inputType="textPassword"
+                            android:padding="12dp"
+                            android:hint="Email"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/light_grey"
+                            >
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPassword">
 
-                        </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputEditText>
 
 
-                    </com.google.android.material.textfield.TextInputLayout>
+                        </com.google.android.material.textfield.TextInputLayout>
 
+                    </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
