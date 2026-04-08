@@ -120,6 +120,33 @@
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
+        <!-- Texto de términos y condiciones, copyright y política -->
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Términos y condiciones"
+            android:textSize="13sp"
+            android:layout_marginTop="18dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/blue_500"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Política de privacidad"
+            android:textSize="13sp"
+            android:layout_marginTop="18dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/blue_500"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/copyright"
+            android:textSize="13sp"
+            android:layout_marginTop="18dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/blue_500"/>
     </LinearLayout>
 
 </ScrollView>

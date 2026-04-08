@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Medical App</string>
+    <string name="copyright">©</string>
 </resources>
