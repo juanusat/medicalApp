@@ -7,8 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".activity_login"
     android:orientation="vertical"
-    android:layout_gravity="center_horizontal"
-    android:background="#F5F5F5">
+    android:layout_gravity="center_horizontal">
 
     <LinearLayout
         android:layout_width="match_parent"
