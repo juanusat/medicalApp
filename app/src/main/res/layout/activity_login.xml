@@ -135,7 +135,7 @@
             android:layout_height="wrap_content"
             android:text="Política de privacidad"
             android:textSize="13sp"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal"
             android:textColor="@color/blue_500"/>
 
@@ -144,9 +144,9 @@
             android:layout_height="wrap_content"
             android:text="@string/copyright"
             android:textSize="13sp"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal"
-            android:textColor="@color/blue_500"/>
+            android:textColor="@color/neutral_500"/>
     </LinearLayout>
 
 </ScrollView>
