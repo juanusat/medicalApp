@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MedicalApp">
         <activity
+            android:name=".MenuActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity_login"
             android:exported="false" />
         <activity
