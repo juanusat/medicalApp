@@ -15,6 +15,8 @@ import com.google.android.material.button.MaterialButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 
+import java.util.Objects;
+
 public class activity_login extends AppCompatActivity {
     TextInputEditText txtEmail, txtClave;
     MaterialButton btnIniciarSesion;
@@ -60,8 +62,8 @@ public class activity_login extends AppCompatActivity {
     }
 
     private void iniciarSesion() {
-        String email = txtEmail.getText().toString();
-        String clave = txtClave.getText().toString();
+        String email = Objects.requireNonNull(txtEmail.getText()).toString();
+        String clave = Objects.requireNonNull(txtClave.getText()).toString();
 
         // validar el ingreso credenciales
         if (email.isEmpty() || clave.isEmpty()) {
