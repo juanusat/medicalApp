@@ -15,6 +15,15 @@ import com.google.android.material.textfield.TextInputEditText;
 public class activity_login extends AppCompatActivity {
     TextInputEditText txtEmail, txtClave;
     MaterialButton btnIniciarSesion;
+
+    // Inicio de sesión desde un array
+    private final String[][] usuarios =
+            {
+                    {"usuario1@clinica.com", "1234"},
+                    {"usuario2@clinica.com", "1234"},
+                    {"usuario3@clinica.com", "1234"}
+            };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,5 +44,13 @@ public class activity_login extends AppCompatActivity {
         btnIniciarSesion.setOnClickListener(v -> {
             Toast.makeText(this, "Login", Toast.LENGTH_SHORT).show();
         });
+    }
+    private boolean validarCredenciales(String email, String clave) {
+        for (String[] usuario : usuarios) {
+            if (usuario[0].equals(email) && usuario[1].equals(clave)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
