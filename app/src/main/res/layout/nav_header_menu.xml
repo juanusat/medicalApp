@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="185dp"
+    android:layout_height="200dp"
     android:background="@drawable/bg_header_nav"
     android:gravity="bottom"
     android:orientation="vertical"
@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Huilder Mera Montanegro"
+        android:textStyle="bold"
         android:textColor="@color/white">
 
     </com.google.android.material.textview.MaterialTextView>

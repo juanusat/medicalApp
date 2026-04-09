@@ -14,4 +14,7 @@
         <item name="colorSurface">@color/neutral_800</item>
         <item name="colorOnSurface">@color/white</item>-->
     </style>
+
+    <style name="Theme.MedicalApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="Theme.MedicalApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark"/>
 </resources>
