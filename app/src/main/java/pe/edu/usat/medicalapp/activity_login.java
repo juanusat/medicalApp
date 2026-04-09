@@ -49,6 +49,7 @@ public class activity_login extends AppCompatActivity {
             iniciarSesion();
         });
     }
+
     private boolean validarCredenciales(String email, String clave) {
         for (String[] usuario : usuarios) {
             if (usuario[0].equals(email) && usuario[1].equals(clave)) {
@@ -57,6 +58,7 @@ public class activity_login extends AppCompatActivity {
         }
         return false;
     }
+
     private void iniciarSesion() {
         String email = txtEmail.getText().toString();
         String clave = txtClave.getText().toString();
@@ -67,12 +69,13 @@ public class activity_login extends AppCompatActivity {
             return;
         }
         if (validarCredenciales(email, clave)) {
-            Toast.makeText(this, "Bienvenido a la aplicación", Toast.LENGTH_SHORT.show());
+            Toast.makeText(this, "Bienvenido a la aplicación", Toast.LENGTH_SHORT).show();
             // Navegar al menù principal
         } else {
             mostarSnackbar("Credenciales incorrectas", android.R.color.holo_red_light);
         }
     }
+
     private void mostarSnackbar(String mensaje, int color) {
         Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), mensaje, Snackbar.LENGTH_LONG);
         View view = snackbar.getView();
