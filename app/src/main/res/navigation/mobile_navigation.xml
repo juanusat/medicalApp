@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/mobile_navigation">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/inicioFragment">
 
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="pe.edu.usat.medicalapp.InicioFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_inicio" />
+    <fragment
+        android:id="@+id/especialidades"
+        android:name="pe.edu.usat.medicalapp.Especialidades"
+        android:label="Especialidades"
+        tools:layout="@layout/fragment_especialidades" />
+    <fragment
+        android:id="@+id/medicos"
+        android:name="pe.edu.usat.medicalapp.Medicos"
+        android:label="Médicos"
+        tools:layout="@layout/fragment_medicos" />
+    <fragment
+        android:id="@+id/registrarCitaFragment"
+        android:name="pe.edu.usat.medicalapp.RegistrarCitaFragment"
+        android:label="Registrar cita"
+        tools:layout="@layout/fragment_registrar_cita" />
+    <fragment
+        android:id="@+id/reprogramarCitaFragment"
+        android:name="pe.edu.usat.medicalapp.ReprogramarCitaFragment"
+        android:label="Reprogramar cita"
+        tools:layout="@layout/fragment_reprogramar_cita" />
+    <fragment
+        android:id="@+id/calificarAtencionFragment"
+        android:name="pe.edu.usat.medicalapp.CalificarAtencionFragment"
+        android:label="Calificar atención"
+        tools:layout="@layout/fragment_calificar_atencion" />
+    <fragment
+        android:id="@+id/acercaDeFragment"
+        android:name="pe.edu.usat.medicalapp.AcercaDeFragment"
+        android:label="Acerca de"
+        tools:layout="@layout/fragment_acerca_de" />
 </navigation>

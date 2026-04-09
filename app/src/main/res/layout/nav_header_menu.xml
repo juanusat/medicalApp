@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="185dp"
+    android:background="@color/blue_700"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="30dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/ic_launcher_foreground"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="2dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtNombreUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Huilder Mera Montanegro"
+        android:textColor="@color/white">
+
+    </com.google.android.material.textview.MaterialTextView>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtEmailUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="hmera@usat.edu.pe"
+        android:textSize="14sp"
+        android:textColor="@color/white">
+
+    </com.google.android.material.textview.MaterialTextView>
+</LinearLayout>
