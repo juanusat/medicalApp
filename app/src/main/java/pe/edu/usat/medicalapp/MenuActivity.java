@@ -9,6 +9,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.navigation.ui.AppBarConfiguration;
 
+import pe.edu.usat.medicalapp.databinding.ActivityMenuBinding;
+
 public class MenuActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
