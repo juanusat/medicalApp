@@ -1,15 +1,18 @@
 package pe.edu.usat.medicalapp;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class activity_login extends AppCompatActivity {
@@ -42,7 +45,8 @@ public class activity_login extends AppCompatActivity {
         btnIniciarSesion = findViewById(R.id.btnIniciarSesion);
 
         btnIniciarSesion.setOnClickListener(v -> {
-            Toast.makeText(this, "Login", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "Login", Toast.LENGTH_SHORT).show();
+            iniciarSesion();
         });
     }
     private boolean validarCredenciales(String email, String clave) {
@@ -52,5 +56,27 @@ public class activity_login extends AppCompatActivity {
             }
         }
         return false;
+    }
+    private void iniciarSesion() {
+        String email = txtEmail.getText().toString();
+        String clave = txtClave.getText().toString();
+
+        // validar el ingreso credenciales
+        if (email.isEmpty() || clave.isEmpty()) {
+            mostarSnackbar("Complete el email y contraseña", android.R.color.holo_orange_light);
+            return;
+        }
+        if (validarCredenciales(email, clave)) {
+            Toast.makeText(this, "Bienvenido a la aplicación", Toast.LENGTH_SHORT.show());
+            // Navegar al menù principal
+        } else {
+            mostarSnackbar("Credenciales incorrectas", android.R.color.holo_red_light);
+        }
+    }
+    private void mostarSnackbar(String mensaje, int color) {
+        Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), mensaje, Snackbar.LENGTH_LONG);
+        View view = snackbar.getView();
+        view.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), color));
+        snackbar.show();
     }
 }
