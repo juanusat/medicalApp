@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="185dp"
-    android:background="@color/blue_700"
+    android:background="@drawable/bg_header_nav"
     android:gravity="bottom"
     android:orientation="vertical"
     android:paddingLeft="16dp"
@@ -22,7 +22,7 @@
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/txtNombreUsuario"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Huilder Mera Montanegro"
@@ -31,11 +31,10 @@
     </com.google.android.material.textview.MaterialTextView>
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/txtEmailUsuario"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="1dp"
         android:text="hmera@usat.edu.pe"
-        android:textSize="14sp"
         android:textColor="@color/white">
 
     </com.google.android.material.textview.MaterialTextView>
