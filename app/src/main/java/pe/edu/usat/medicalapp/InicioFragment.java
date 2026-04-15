@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,5 +28,22 @@ public class InicioFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle )
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        // Navegar hacia opción de especialidades
+        binding.btnVarEspecialidades.setOnClickListener(v -> {
+            NavHostFragment.findNavController(InicioFragment.this).navigate(R.id.nav_especialidades);
+        });
+        // Navegar hacia opción de médicos
+        binding.btnVarEspecialidades.setOnClickListener(v -> {
+            NavHostFragment.findNavController(InicioFragment.this).navigate(R.id.nav_medicos);
+        });
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 }
