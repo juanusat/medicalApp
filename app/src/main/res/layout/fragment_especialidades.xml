@@ -12,5 +12,5 @@
         android:layout_width="match_parent"
         tools:listitem="@layout/item_especialidad"
         android:id="@+id/rvEspecialides"
-        >
+        />
 </FrameLayout>
