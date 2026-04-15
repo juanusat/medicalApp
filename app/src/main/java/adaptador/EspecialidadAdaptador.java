@@ -1,28 +1,47 @@
 package adaptador;
+
+import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
 import pe.edu.usat.medicalapp.Especialidad;
 import pe.edu.usat.medicalapp.databinding.ItemEspecialidadBinding;
 
-public class EspecialidadAdaptador extends  RecyclerView.Adapter<EspecialidadAdaptador.ViewHolder> {
+public class EspecialidadAdaptador extends RecyclerView.Adapter<EspecialidadAdaptador.ViewHolder> {
+    private ArrayList<Especialidad> listaEspecidad;
+
+    public EspecialidadAdaptador(ArrayList<Especialidad> listaEspecialidad) {
+        this.listaEspecidad = listaEspecidad;
+    }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        // Permite vincular el adaptador con el archivo que contiene la plantilla MaterialCardView
+        ItemEspecialidadBinding binding = ItemEspecialidadBinding.inflate
+                (
+                        LayoutInflater.from(parent.getContext()),
+                        parent,
+                        false
+                );
+
+        return new ViewHolder(binding);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+        // Permite gestionar la impresiòn de los datos en la plantilla
+        Especialidad especialidad = listaEspecidad.get(position);
+        holder.mostrarDatos(especialidad);
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return listaEspecidad.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
