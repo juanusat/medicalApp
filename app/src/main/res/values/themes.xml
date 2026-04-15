@@ -14,4 +14,9 @@
 
     <style name="Theme.MedicalApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="Theme.MedicalApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="RoundedImageStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
 </resources>
