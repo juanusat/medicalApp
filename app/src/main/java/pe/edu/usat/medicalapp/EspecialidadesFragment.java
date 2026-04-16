@@ -26,7 +26,7 @@ public class EspecialidadesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentInicioBinding.inflate(inflater);
+        binding = FragmentEspecialidadesBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
