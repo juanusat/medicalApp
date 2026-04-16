@@ -8,14 +8,14 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import java.util.ArrayList;
 
+import pe.edu.usat.medicalapp.adaptador.EspecialidadAdaptador;
 import pe.edu.usat.medicalapp.databinding.FragmentEspecialidadesBinding;
-import pe.edu.usat.medicalapp.databinding.FragmentInicioBinding;
 import pe.edu.usat.medicalapp.datos.DatosClinica;
+import pe.edu.usat.medicalapp.modelo.Especialidad;
 
 public class EspecialidadesFragment extends Fragment {
     FragmentEspecialidadesBinding binding;

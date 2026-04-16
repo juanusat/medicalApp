@@ -1,4 +1,4 @@
-package pe.edu.usat.medicalapp;
+package pe.edu.usat.medicalapp.adaptador;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import pe.edu.usat.medicalapp.modelo.Especialidad;
 import pe.edu.usat.medicalapp.databinding.ItemEspecialidadBinding;
 
 public class EspecialidadAdaptador extends RecyclerView.Adapter<EspecialidadAdaptador.ViewHolder> {

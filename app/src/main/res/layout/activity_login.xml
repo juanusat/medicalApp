@@ -5,35 +5,35 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_login"
+    android:layout_gravity="center_horizontal"
     android:orientation="vertical"
-    android:layout_gravity="center_horizontal">
+    tools:context=".activity_login">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:padding="20dp"
-        android:gravity="center_horizontal">
+        android:padding="20dp">
 
         <!-- colocar aquí los componentes del inicio de sesión -->
         <ImageView
+            android:id="@+id/imgLogo"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:id="@+id/imgLogo"
-            android:src="@drawable/logo"
-            >
+            android:src="@drawable/logo">
 
         </ImageView>
+
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/app_name"
             android:textSize="30sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
         </com.google.android.material.textview.MaterialTextView>
@@ -43,9 +43,9 @@
             android:layout_height="wrap_content"
             android:text="Sistema de citas médicas"
             android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
         </com.google.android.material.textview.MaterialTextView>
@@ -53,11 +53,12 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="8dp"
             app:strokeColor="@color/neutral_400"
-            app:strokeWidth="1dp"
-            android:layout_marginTop="10dp">
+            app:strokeWidth="1dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -69,49 +70,52 @@
                     android:layout_height="wrap_content"
                     android:text="Inicio de Sesión"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
                 <!-- Caja de texto para email -->
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:hint="Email"
-                    app:endIconMode="clear_text"
-                    android:layout_marginTop="10dp">
+                    app:endIconMode="clear_text">
+
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtEmail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/txtEmail"
-                        android:inputType="textEmailAddress"/>
+                        android:inputType="textEmailAddress" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <!-- Caja de texto para contraseña -->
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:hint="Contraseña"
-                    app:endIconMode="password_toggle"
-                    android:layout_marginTop="10dp">
+                    app:endIconMode="password_toggle">
+
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtClave"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/txtClave"
-                        android:inputType="textPassword"/>
+                        android:inputType="textPassword" />
                 </com.google.android.material.textfield.TextInputLayout>
                 <!-- Texto de olvido contraseña -->
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="¿Olvidaste tu contraseña?"
-                    android:textSize="14sp"
-                    android:layout_marginTop="20dp"
                     android:layout_gravity="end"
-                    android:textColor="@color/blue_500"/>
+                    android:layout_marginTop="20dp"
+                    android:text="¿Olvidaste tu contraseña?"
+                    android:textColor="@color/blue_500"
+                    android:textSize="14sp" />
+
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnIniciarSesion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Iniciar sesión"
-                    android:id="@+id/btnIniciarSesion"
                     android:layout_marginTop="10dp"
+                    android:text="Iniciar sesión"
                     android:textSize="16sp">
 
                 </com.google.android.material.button.MaterialButton>
@@ -123,29 +127,29 @@
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Términos y condiciones"
-            android:textSize="13sp"
             android:layout_marginTop="18dp"
             android:gravity="center_horizontal"
-            android:textColor="@color/blue_500"/>
+            android:text="Términos y condiciones"
+            android:textColor="@color/blue_500"
+            android:textSize="13sp" />
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
             android:text="Política de privacidad"
-            android:textSize="13sp"
-            android:layout_marginTop="10dp"
-            android:gravity="center_horizontal"
-            android:textColor="@color/blue_500"/>
+            android:textColor="@color/blue_500"
+            android:textSize="13sp" />
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/copyright"
-            android:textSize="13sp"
             android:layout_marginTop="10dp"
             android:gravity="center_horizontal"
-            android:textColor="@color/neutral_500"/>
+            android:text="@string/copyright"
+            android:textColor="@color/neutral_500"
+            android:textSize="13sp" />
     </LinearLayout>
 
 </ScrollView>

@@ -2,7 +2,7 @@ package pe.edu.usat.medicalapp.datos;
 
 import java.util.ArrayList;
 
-import pe.edu.usat.medicalapp.Especialidad;
+import pe.edu.usat.medicalapp.modelo.Especialidad;
 import pe.edu.usat.medicalapp.R;
 
 public class DatosClinica {

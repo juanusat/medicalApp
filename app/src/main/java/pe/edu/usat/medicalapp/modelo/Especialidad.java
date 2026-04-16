@@ -1,4 +1,4 @@
-package pe.edu.usat.medicalapp;
+package pe.edu.usat.medicalapp.modelo;
 
 public class Especialidad {
     public String getNombre() {

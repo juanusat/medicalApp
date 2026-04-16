@@ -17,7 +17,7 @@
         tools:layout="@layout/fragment_especialidades" />
     <fragment
         android:id="@+id/medicos"
-        android:name="pe.edu.usat.medicalapp.Medicos"
+        android:name="pe.edu.usat.medicalapp.modelo.Medicos"
         android:label="Médicos"
         tools:layout="@layout/fragment_medicos" />
     <fragment

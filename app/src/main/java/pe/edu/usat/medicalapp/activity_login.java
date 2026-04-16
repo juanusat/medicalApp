@@ -1,5 +1,6 @@
 package pe.edu.usat.medicalapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -73,6 +74,8 @@ public class activity_login extends AppCompatActivity {
         if (validarCredenciales(email, clave)) {
             Toast.makeText(this, "Bienvenido a la aplicación", Toast.LENGTH_SHORT).show();
             // Navegar al menù principal
+            Intent intent = new Intent(activity_login.this, MenuActivity.class);
+            startActivity(intent);
         } else {
             mostarSnackbar("Credenciales incorrectas", android.R.color.holo_red_light);
         }
