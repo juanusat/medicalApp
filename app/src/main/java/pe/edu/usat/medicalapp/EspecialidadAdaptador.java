@@ -1,4 +1,4 @@
-package adaptador;
+package pe.edu.usat.medicalapp;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import pe.edu.usat.medicalapp.Especialidad;
 import pe.edu.usat.medicalapp.databinding.ItemEspecialidadBinding;
 
 public class EspecialidadAdaptador extends RecyclerView.Adapter<EspecialidadAdaptador.ViewHolder> {
@@ -18,10 +17,16 @@ public class EspecialidadAdaptador extends RecyclerView.Adapter<EspecialidadAdap
         this.listaEspecidad = listaEspecidad;
     }
 
+    public void actualizarListaEspecialidad(ArrayList<Especialidad> listaEspecidad) {
+        this.listaEspecidad = listaEspecidad;
+        // Con la fainalidad de que el recycler se refresque, aplicamos notifyDataSetChanged
+        notifyDataSetChanged();
+    }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // Permite vincular el adaptador con el archivo que contiene la plantilla MaterialCardView
+        // Permite vincular el pe.edu.usat.medicalapp.adaptador con el archivo que contiene la plantilla MaterialCardView
         ItemEspecialidadBinding binding = ItemEspecialidadBinding.inflate
                 (
                         LayoutInflater.from(parent.getContext()),
@@ -34,7 +39,7 @@ public class EspecialidadAdaptador extends RecyclerView.Adapter<EspecialidadAdap
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        // Permite gestionar la impresiòn de los datos en la plantilla
+        // Permite gestionar la impresiòn de los pe.edu.usat.medicalapp.datos en la plantilla
         Especialidad especialidad = listaEspecidad.get(position);
         holder.mostrarDatos(especialidad);
     }
