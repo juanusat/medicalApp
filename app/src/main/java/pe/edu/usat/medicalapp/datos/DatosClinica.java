@@ -17,7 +17,19 @@ public class DatosClinica {
                     new Especialidad(
                             "Pediatría",
                             "Atención médica especializada para niños y adolescentes",
-                            R.id.imgEspecialidad)
+                            R.drawable.pediatria)
+            );
+            listaEspecialidades.add(
+                    new Especialidad(
+                            "Cardiología",
+                            "Diagnóstico y trantamiento de enfermedades del corazón",
+                            R.drawable.cardiologia)
+            );
+            listaEspecialidades.add(
+                    new Especialidad(
+                            "Dermatología",
+                            "Atención integral en enfermedades y cuidados de la piel",
+                            R.drawable.dermatologia)
             );
         }
     }
